@@ -1,0 +1,70 @@
+# Project Plan: Amarax Central Platform
+
+## Phase 1: Platform Re-Branding, Re-Design, and Development
+
+- [x] **Step 1 (001): Initial Requirements & Architecture (Adapted from Sophie Project):**
+    - [x] Clarified initial web agent requirements.
+    - [x] Selected Flask backend and React/Next.js frontend architecture.
+- [x] **Step 2 (002): Incorporate New Vision for Amarax Central:**
+    - [x] Received new branding: "Amarax Central" by "Amarax Productions™️©️".
+    - [x] Received UI priorities: Thrae IDE layout, color schemes from new Sophie images.
+    - [x] Received new feature requests: Agent Market, Agent Flow Builder.
+- [x] **Step 3 (003): Update Design Documentation for Amarax Central:**
+    - [x] Conceptually rename design document from `sophie_web_platform_design.md` to `amarax_central_platform_design.md` (by saving updated content to new file name).
+    - [x] Update design document with "Amarax Central" branding throughout.
+    - [x] Integrate Thrae IDE layout as primary UI/UX direction and specify use of new color schemes from provided images.
+    - [x] Add "Agent Market" feature to design document (conceptual architecture, database considerations, API stubs, UI/UX notes).
+    - [x] Add "Agent Flow Builder" feature to design document (conceptual architecture, database considerations, API stubs, UI/UX notes).
+    - [x] Review and finalize initial updates to the design document for Amarax Central.
+    - [x] Incorporate mascot images and animation strategy into the design document (Section 5.X and Appendix A).
+- [x] **Step 4 (004): Detailed Design of Web Interface and Backend for Amarax Central:**
+    - [x] Fully detail database schema for all features (core chat, RAG, subscriptions, web roaming, Agent Market, Agent Flow Builder), including mascot avatar URLs.
+    - [x] Fully detail API endpoints for all features, supporting mascot information.
+    - [x] Create detailed UI/UX descriptions (in design doc) for all sections, incorporating Thrae IDE layout and Amarax branding/colors.
+    - [x] Integrate mascot usage (different robots for different agents) into UI/UX descriptions.
+    - [x] Design concepts for simple mascot animations (GIFs, CSS/JS) for branding and engagement in design doc.
+    - [x] Finalize technical plans for downloadable client, RAG system, web roaming, and subscription management within the Amarax Central context (as per design doc).
+- [ ] **Step 5 (005): Implement and Test Amarax Central Web Application:**
+    - [x] Update/Re-initialize Flask backend project for Amarax Central branding and features (`sophie_web_platform`).
+        - [x] Adapt existing models (User, Subscription, RAG, Chat) and routes; implement new models (Flow) and routes for Agent Market and Flow Builder. (Basic models and routes done, schema updated for mascot URLs)
+    - [x] Update/Re-initialize Next.js frontend project for Amarax Central (`sophie_frontend`).
+    - [ ] **Phase 1: Core Platform & Chat (MVP for Amarax Central)**
+        - [x] **1.1: Branding & Basic Structure (Frontend)**
+            - [x] Define base HTML and body styles in `globals.css` (dark theme, Amarax Central colors from `amarax_central_platform_design.md`).
+            - [x] Create main layout structure in `layout.tsx` (Top Bar, Left Sidebar, Main Content, Right Sidebar, Status Bar - Thrae IDE style).
+            - [x] Create placeholder components for each layout section.
+        - [x] **1.2: Implement Top Menu Bar and Branding (Refined in `layout.tsx` with logo).**
+        - [x] **1.3: Implement Left Sidebar Navigation (icon-based) (Refined in `layout.tsx`).**
+        - [x] **1.4: Implement basic Chat UI panel.** (Initial component `ChatPanel.tsx` created, needs UI/UX detailing from design doc)
+        - [x] **1.5: Implement basic User Registration and Login UI and connect to backend.** (Initial components `LoginForm.tsx` and `RegistrationForm.tsx` created)
+        - [x] **1.6: Integrate Mascot Images and Basic Animations (Frontend - Initial Pass Done):**
+            - [x] Copied mascot images to `/public/logos` and `/public/mascots`.
+            - [x] Updated `layout.tsx` to use logo and example mascot image, applied animation classes.
+            - [x] Updated `globals.css` with animation styles and refined color palette.
+            - [ ] Further integrate specific mascot avatars into `ChatPanel.tsx`, `RagAgentCreator.tsx`, and new Market/Flow components based on detailed UI/UX design.
+    - [ ] **Phase 2: RAG Agent Creation & Basic Subscription Framework**
+        - [x] **2.1: Implement RAG Agent creation UI and backend integration.** (Initial component `RagAgentCreator.tsx` created, needs UI/UX detailing and mascot selection feature)
+        - [x] **2.2: Implement basic Subscription Tier display UI.** (Initial component `SubscriptionTiersDisplay.tsx` created)
+        - [ ] **2.3: Backend: Implement mascot_avatar_url storage and retrieval for RagAgents.**
+    - [ ] **Phase 3: Agent Flow Builder (Core Functionality)**
+        - [x] **3.1: Implement basic Flow Builder UI (canvas, basic node drag-drop).** (Initial component `FlowBuilderCanvas.tsx` created, needs UI/UX detailing)
+        - [ ] **3.2: Implement backend for saving/loading flow definitions (AgentFlows table).**
+        - [ ] **3.3: Implement backend for flow execution logic (AgentFlowExecutions table, basic execution).**
+    - [ ] **Phase 4: Agent Market (Core Functionality)**
+        - [ ] **4.1: Implement Agent Market UI (browsing, listing display - `AgentMarketplace.tsx`).**
+        - [ ] **4.2: Implement backend for publishing (AgentMarketListings table), acquiring (UserAcquiredAgents table), and listing RAG agents.**
+        - [ ] **4.3: Integrate mascot_display_url for market listings.**
+    - [ ] **Phase 5: Downloadable Client & Full Subscription Integration**
+        - [ ] **5.1: Design and begin implementation of Downloadable Client.**
+        - [ ] **5.2: Integrate payment gateway for subscriptions.**
+    - [ ] **Phase 6: Advanced Features & Polish** (Web Roaming, Advanced Flow/Market, Training, UI Refinements, Security)
+    - [ ] Conduct unit, integration, and UI testing throughout all phases.
+- [ ] **Step 6 (006): Deploy Amarax Central Website Permanently:**
+    - [ ] Prepare application for production deployment (database setup, environment configurations, security hardening).
+    - [ ] Choose a suitable hosting platform.
+    - [ ] Deploy backend and frontend applications.
+    - [ ] Configure domain names, SSL certificates.
+- [ ] **Step 7 (007): Deliver Public URL and Maintenance Guidelines:**
+    - [ ] Provide the public URL of the deployed Amarax Central platform.
+    - [ ] Deliver comprehensive documentation (user manual, admin guide, maintenance procedures).
+    - [ ] Provide source code and instructions for further development or modifications.
